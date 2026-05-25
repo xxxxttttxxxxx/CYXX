@@ -3,20 +3,20 @@
 这是纯静态网站包，适合 GitHub Pages。
 不用云服务器，不用 PHP，不用数据库，不用 npm，不用编译。
 
+## 当前登录账号
+
+账号：`chenyifeng`
+
+密码：你自己设置的密码。
+
+密码哈希保存在：`assets/js/config.js`
+
 ## 重要限制
 
 GitHub Pages 是静态网站托管，只托管 HTML、CSS、JavaScript 文件。
 这个版本的“登录”是前端门锁，适合防止普通访客随手进入，但不等于真正的服务器级账号系统。
 
 不要把身份证、银行卡、隐私照、私密文件放进公开 GitHub Pages 仓库。
-
-## 默认账号
-
-- 账号：me，密码：1314520，角色：admin
-- 账号：wife，密码：5201314，角色：admin
-- 账号：guest，密码：love2026，角色：guest
-
-上线后请修改 `assets/js/config.js` 里的用户密码哈希。
 
 ## 修改网站内容
 
@@ -28,12 +28,13 @@ GitHub Pages 是静态网站托管，只托管 HTML、CSS、JavaScript 文件。
 ## GitHub Pages 上传步骤
 
 1. GitHub 新建仓库，例如：`love-site`
-2. 上传本文件夹内所有文件，不要只上传 zip
-3. 仓库 Settings → Pages
-4. Source 选择 Deploy from a branch
-5. Branch 选择 main，Folder 选择 /(root)，Save
-6. 等 1-3 分钟
-7. 打开 `https://你的GitHub用户名.github.io/love-site/`
+2. 解压本压缩包
+3. 上传解压后文件夹里面的所有文件，不要只上传 zip
+4. 仓库 Settings → Pages
+5. Source 选择 Deploy from a branch
+6. Branch 选择 main，Folder 选择 /(root)，Save
+7. 等 1-3 分钟
+8. 打开 `https://你的GitHub用户名.github.io/love-site/`
 
 ## 绑定自己的域名
 
