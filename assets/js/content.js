@@ -49,12 +49,12 @@ const SITE_CONTENT = {
   ],
 
   album: [
-    { title: "日常碎片", desc: "以后放你们最自然的合照。", src: "", tag: "Daily" },
-    { title: "香港旅行", desc: "把第一次旅行的照片放在这里。", src: "", tag: "Travel" },
+    { title: "日常碎片", desc: "以后放你们最自然的合照。", src: "uploads/album/17.JPG", tag: "Daily" },
+    { title: "香港旅行", desc: "把第一次旅行的照片放在这里。", src: "uploads/album/16.JPG", tag: "Travel" },
     { title: "订婚时刻", desc: "郑重选择彼此的那一天。", src: "", tag: "Promise" },
     { title: "求婚记忆", desc: "一生一次的认真和浪漫。", src: "uploads/album/1.JPG", tag: "Proposal" },
     { title: "结婚这天", desc: "从此以后，家有了新的定义。", src: "", tag: "Wedding" },
-    { title: "未来待填充", desc: "留给以后更多照片。", src: "", tag: "Future" }
+    { title: "未来待填充", desc: "留给以后更多照片。", src: "uploads/album/20.JPG", tag: "Future" }
   ],
 
   diary: [
