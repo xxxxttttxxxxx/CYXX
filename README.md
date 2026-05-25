@@ -1,54 +1,70 @@
-# Love Site - GitHub Pages 直接上传版
+# love you thousand years
 
-这是纯静态网站包，适合 GitHub Pages。
-不用云服务器，不用 PHP，不用数据库，不用 npm，不用编译。
+这是 GitHub Pages 直接上传版，不用服务器，不用 PHP，不用数据库，不用 npm。
 
-## 当前登录账号
+## 当前内容
 
-账号：`chenyifeng`
+- 网站标题：love you thousand years
+- 名字：徐腾啸 × 陈意峰
+- 纪念日：2026.02.11
+- 风格：温柔粉色系 + 高级奶油风
+- 已加入：故事时间线、重要日期、相册、日记、愿望清单、给陈意峰的一封信、私密空间、留言墙
 
-密码：你自己设置的密码。
+## 登录账号
 
-密码哈希保存在：`assets/js/config.js`
+账号按你提供的信息配置在：
 
-## 重要限制
+```text
+assets/js/config.js
+```
 
-GitHub Pages 是静态网站托管，只托管 HTML、CSS、JavaScript 文件。
-这个版本的“登录”是前端门锁，适合防止普通访客随手进入，但不等于真正的服务器级账号系统。
+为了安全，README 不直接公开写密码。你如果要改账号密码，也是在 `assets/js/config.js` 里改。
 
-不要把身份证、银行卡、隐私照、私密文件放进公开 GitHub Pages 仓库。
+## 怎么上传
 
-## 修改网站内容
+解压后，不要上传外层文件夹。进入文件夹里面，选中这些内容上传到 GitHub 仓库根目录：
 
-- 网站标题、纪念日、账号：`assets/js/config.js`
-- 首页文字、故事、日记、相册图片列表：`assets/js/content.js`
-- 样式：`assets/css/style.css`
-- 照片：放到 `uploads/album/`
+```text
+assets
+index.html
+home.html
+tools
+uploads
+README.md
+.nojekyll
+CNAME
+```
 
-## GitHub Pages 上传步骤
+上传后点 `Commit changes`，等 1 到 3 分钟刷新网站。
 
-1. GitHub 新建仓库，例如：`love-site`
-2. 解压本压缩包
-3. 上传解压后文件夹里面的所有文件，不要只上传 zip
-4. 仓库 Settings → Pages
-5. Source 选择 Deploy from a branch
-6. Branch 选择 main，Folder 选择 /(root)，Save
-7. 等 1-3 分钟
-8. 打开 `https://你的GitHub用户名.github.io/love-site/`
+## 怎么改内容
 
-## 绑定自己的域名
+改基础信息、账号：
 
-在仓库 Settings → Pages → Custom domain 填你的域名。
-然后去域名 DNS 管理处设置：
+```text
+assets/js/config.js
+```
 
-如果用 www：
-- 类型：CNAME
-- 主机记录：www
-- 值：你的GitHub用户名.github.io
+改故事、日记、相册、愿望、文案：
 
-如果用根域名：
-- 类型：A
-- 主机记录：@
-- 值：GitHub Pages 官方 IP
+```text
+assets/js/content.js
+```
 
-以 GitHub Docs 当前页面为准。
+改颜色和排版：
+
+```text
+assets/css/style.css
+```
+
+上传照片：
+
+```text
+uploads/album/
+```
+
+然后在 `assets/js/content.js` 里把图片路径改成对应文件名。
+
+## 重要提醒
+
+GitHub Pages 是静态网站，登录只是前端门锁，不是服务器级私密系统。不要上传身份证、银行卡、非常私密照片、真实隐私文件。

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>我们的专属网站</title>
+  <title>love you thousand years</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
@@ -11,8 +11,10 @@
     <a class="logo" href="#home">♡ <span id="siteName"></span></a>
     <nav>
       <a href="#story">故事</a>
+      <a href="#dates">纪念日</a>
       <a href="#album">相册</a>
       <a href="#diary">日记</a>
+      <a href="#wishes">愿望</a>
       <a href="#message">留言</a>
       <a id="privateLink" href="#private">私密</a>
       <button id="logoutBtn" class="ghost">退出</button>
@@ -21,53 +23,90 @@
 
   <main>
     <section id="home" class="hero">
-      <div>
+      <div class="hero-copy">
         <p class="eyebrow" id="anniversaryText"></p>
         <h1 id="heroTitle"></h1>
         <p id="heroSubtitle" class="hero-subtitle"></p>
+        <div class="hero-quote" id="heroQuote"></div>
         <div class="hero-actions">
           <a class="button" href="#story">看我们的故事</a>
-          <a class="button secondary" href="#album">看相册</a>
+          <a class="button secondary" href="#private">看悄悄话</a>
         </div>
       </div>
-      <div class="count-card">
-        <span>我们已经在一起</span>
-        <strong id="daysTogether">0</strong>
-        <span>天</span>
+      <div class="hero-side">
+        <div class="count-card">
+          <span>距离专属纪念日已过去</span>
+          <strong id="daysTogether">0</strong>
+          <span>天</span>
+        </div>
+        <div class="mini-card">
+          <span>今日暗号</span>
+          <strong id="dailyPassword"></strong>
+        </div>
       </div>
     </section>
 
     <section id="story" class="section">
       <div class="section-title">
-        <p>Story</p>
+        <p>Story Line</p>
         <h2>我们的故事</h2>
+        <span>从第一次认识，到把日子写成只属于你们的长诗。</span>
       </div>
       <div id="storyList" class="timeline"></div>
+    </section>
+
+    <section id="dates" class="section soft-section">
+      <div class="section-title">
+        <p>Special Days</p>
+        <h2>重要日期</h2>
+        <span>每一个日期都不是普通数字，是你们一起走过的坐标。</span>
+      </div>
+      <div id="dateGrid" class="date-grid"></div>
     </section>
 
     <section id="album" class="section">
       <div class="section-title">
         <p>Album</p>
         <h2>我们的相册</h2>
+        <span>照片可以慢慢换，回忆会越来越满。</span>
       </div>
       <div id="albumGrid" class="grid"></div>
     </section>
 
-    <section id="diary" class="section">
+    <section id="diary" class="section soft-section">
       <div class="section-title">
         <p>Diary</p>
         <h2>生活日记</h2>
+        <span>把一句想念、一点小事、一段日常，都认真收藏。</span>
       </div>
       <div id="diaryList" class="cards"></div>
+    </section>
+
+    <section id="wishes" class="section">
+      <div class="section-title">
+        <p>Wish List</p>
+        <h2>以后想一起完成的事</h2>
+        <span>不是宏大的愿望，是两个人愿意一起慢慢完成的生活。</span>
+      </div>
+      <div id="wishList" class="wish-list"></div>
+    </section>
+
+    <section id="letter" class="section soft-section">
+      <div class="section-title">
+        <p>Letter</p>
+        <h2>给陈意峰的一封信</h2>
+      </div>
+      <article id="letterCard" class="letter-card"></article>
     </section>
 
     <section id="message" class="section">
       <div class="section-title">
         <p>Message</p>
         <h2>留言墙</h2>
+        <span>这里的留言保存在当前浏览器里，适合写临时小纸条。</span>
       </div>
       <div class="message-box">
-        <textarea id="messageInput" rows="4" placeholder="写一句祝福或想说的话"></textarea>
+        <textarea id="messageInput" rows="4" placeholder="写一句想说的话，比如：今天也很想你。"></textarea>
         <button id="messageBtn">保存留言</button>
       </div>
       <div id="messageList" class="cards"></div>
@@ -77,6 +116,7 @@
       <div class="section-title">
         <p>Private</p>
         <h2>只属于我们的私密空间</h2>
+        <span>这里适合放你们的暗号、约定和只有彼此懂的话。</span>
       </div>
       <div id="privateContent" class="private-card"></div>
     </section>
