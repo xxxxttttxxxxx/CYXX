@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我们的专属网站 - 登录</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body class="login-body">
+  <main class="login-card">
+    <div class="brand-mark">♡</div>
+    <h1 id="loginTitle">我们的专属网站</h1>
+    <p class="muted">输入你们设置的账号密码进入。</p>
+
+    <form id="loginForm" class="form">
+      <label>
+        账号
+        <input id="username" autocomplete="username" placeholder="me / wife / guest" required />
+      </label>
+      <label>
+        密码
+        <input id="password" type="password" autocomplete="current-password" placeholder="请输入密码" required />
+      </label>
+      <button type="submit">进入网站</button>
+      <p id="loginMsg" class="msg"></p>
+    </form>
+
+    <p class="small-tip">第一次上传后，记得修改默认账号密码。</p>
+  </main>
+
+  <script src="./assets/js/config.js"></script>
+  <script src="./assets/js/auth.js"></script>
+  <script>
+    document.getElementById('loginTitle').textContent = SITE_CONFIG.siteTitle;
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      const msg = document.getElementById('loginMsg');
+      const ok = await login(username, password);
+      if (ok) {
+        location.href = './home.html';
+      } else {
+        msg.textContent = '账号或密码不对。';
+      }
+    });
+  </script>
+</body>
+</html>

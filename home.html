@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我们的专属网站</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#home">♡ <span id="siteName"></span></a>
+    <nav>
+      <a href="#story">故事</a>
+      <a href="#album">相册</a>
+      <a href="#diary">日记</a>
+      <a href="#message">留言</a>
+      <a id="privateLink" href="#private">私密</a>
+      <button id="logoutBtn" class="ghost">退出</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <p class="eyebrow" id="anniversaryText"></p>
+        <h1 id="heroTitle"></h1>
+        <p id="heroSubtitle" class="hero-subtitle"></p>
+        <div class="hero-actions">
+          <a class="button" href="#story">看我们的故事</a>
+          <a class="button secondary" href="#album">看相册</a>
+        </div>
+      </div>
+      <div class="count-card">
+        <span>我们已经在一起</span>
+        <strong id="daysTogether">0</strong>
+        <span>天</span>
+      </div>
+    </section>
+
+    <section id="story" class="section">
+      <div class="section-title">
+        <p>Story</p>
+        <h2>我们的故事</h2>
+      </div>
+      <div id="storyList" class="timeline"></div>
+    </section>
+
+    <section id="album" class="section">
+      <div class="section-title">
+        <p>Album</p>
+        <h2>我们的相册</h2>
+      </div>
+      <div id="albumGrid" class="grid"></div>
+    </section>
+
+    <section id="diary" class="section">
+      <div class="section-title">
+        <p>Diary</p>
+        <h2>生活日记</h2>
+      </div>
+      <div id="diaryList" class="cards"></div>
+    </section>
+
+    <section id="message" class="section">
+      <div class="section-title">
+        <p>Message</p>
+        <h2>留言墙</h2>
+      </div>
+      <div class="message-box">
+        <textarea id="messageInput" rows="4" placeholder="写一句祝福或想说的话"></textarea>
+        <button id="messageBtn">保存留言</button>
+      </div>
+      <div id="messageList" class="cards"></div>
+    </section>
+
+    <section id="private" class="section private-section">
+      <div class="section-title">
+        <p>Private</p>
+        <h2>只属于我们的私密空间</h2>
+      </div>
+      <div id="privateContent" class="private-card"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="footerText"></span>
+  </footer>
+
+  <script src="./assets/js/config.js"></script>
+  <script src="./assets/js/content.js"></script>
+  <script src="./assets/js/auth.js"></script>
+  <script src="./assets/js/home.js"></script>
+</body>
+</html>
